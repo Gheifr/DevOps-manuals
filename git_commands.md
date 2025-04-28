@@ -91,9 +91,7 @@
 
 12. Вибрати рядки за шаблоном із "хто і коли змінював рядки файлу":
 
-`git blame <file_name> | grep <title>`
-
-
+>`git blame <file_name> | grep <title>`
 > <title> - рядок який програма шукатиме в загальному вигляді, наприклад `git blame /hero.css | grep 'username'` виведе всі рядки, де міститься текст "username" по повному співпадінню
 
 `git blame <file_name> | grep -i <title>`
