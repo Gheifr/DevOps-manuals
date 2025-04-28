@@ -86,28 +86,24 @@
 
 11. Перевірити хто і коли змінював рядки файлу:
 
-
 ```git blame <file_name>```
 
 
 12. Вибрати рядки за шаблоном із "хто і коли змінював рядки файлу":
 
-
-```git blame <file_name> | grep <title>```
+`git blame <file_name> | grep <title>`
 
 
 > [!NOTE]
 > <title> - рядок який програма шукатиме в загальному вигляді, наприклад `git blame /hero.css | grep 'username'` виведе всі рядки, де міститься текст "username" по повному співпадінню
 
-
-```git blame <file_name> | grep -i <title>```
+`git blame <file_name> | grep -i <title>`
 
 
 > [!NOTE]
 > <title> - спрацює так само як і попередній приклад та виведе всі рядки, де міститься текст "username" але, на відміну від нього, незважаючи на регістр літер, наприклад, якщо в рядку буде "Username", "uSerName" або "USERNAME"
 
-
-```git blame <file_name> | grep -v <title>```
+`git blame <file_name> | grep -v <title>`
 
 
 > [!NOTE]
