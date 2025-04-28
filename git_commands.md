@@ -29,7 +29,7 @@
 
 - всі:
 
-```git add *```
+```git add .```
 
 ![](/src/img/git_cmd/add_all.png)
 
