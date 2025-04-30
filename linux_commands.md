@@ -1,0 +1,147 @@
+## Зміст
+- [Навігація в системі](#Навігація-в-системі)
+- [Файли та каталоги](#Файли-та-каталоги)
+- [Link Text](#sample-section)
+- [Link Text](#sample-section)
+- [Link Text](#sample-section)
+- [Link Text](#sample-section)
+- [Link Text](#sample-section)
+- [Link Text](#sample-section)
+- [Link Text](#sample-section)
+- [Link Text](#sample-section)
+- [Link Text](#sample-section)
+
+
+
+
+## Навігація в системі
+```
+pwd               # Поточний каталог
+ls                # Перелік файлів
+ls -la            # Детальний список з прихованими файлами
+cd /path/to/dir   # Перехід у каталог
+cd ~              # Перехід в домашню директорію
+cd ..             # Перехід на рівень вище
+```
+
+## Файли та каталоги
+```
+touch file.txt             # Створити порожній файл
+mkdir new_folder           # Створити каталог
+rm file.txt                # Видалити файл
+rm -r folder               # Видалити каталог рекурсивно
+cp file1 file2             # Копіювати файл
+mv oldname newname         # Перейменувати або перемістити
+cat file.txt               # Вивести вміст файлу
+less file.txt              # Перегляд файлу посторінково
+head -n 10 file.txt        # Перші 10 рядків
+tail -n 10 file.txt        # Останні 10 рядків
+```
+
+## Пошук і перегляд
+```
+find /path -name file.txt      # Пошук файлу за іменем
+grep "текст" file.txt          # Пошук рядків у файлі
+grep -r "текст" /folder        # Пошук по каталогу
+```
+
+## Користувачі та права
+```
+whoami                          # Ім'я поточного користувача
+id                              # ID користувача та груп
+sudo [command]                  # Виконати команду від root
+chmod +x script.sh              # Дозволити виконання файлу
+chown user:group file.txt       # Зміна власника
+sudo passwd [USER]              # Встановити/змінити пароль [юзера], без параметру - для себе, поточного юзера
+adduser username                # Створити нового користувача (Debian/Ubuntu)
+useradd -m username             # Створити нового користувача (інші дистрибутиви)
+deluser username                # Видалити користувача (без домашнього каталогу)
+usermod -aG groupname user      # Додати користувача до групи
+groups username                 # Показати групи користувача
+who                             # Хто залогінений
+w                               # Детальніше: хто залогінений і що робить
+```
+
+## Система та процеси
+```
+top                            # Системний моніторинг (натисни q для виходу)
+htop                           # Покращена версія top (потрібно встановити)
+ps aux                         # Список всіх процесів
+kill PID                       # Завершити процес
+df -h                          # Інформація про файлові системи
+du -sh *                       # Розмір файлів і папок у каталозі
+free -h                        # Інформація про оперативну пам’ять
+uptime                         # Час роботи системи
+```
+
+## Мережа
+```
+ip a                           # IP-адреси інтерфейсів
+ping google.com                # Перевірка підключення
+curl http://example.com        # HTTP-запит
+wget URL                       # Завантаження файлу
+ss -tuln                       # Перевірка відкритих портів
+```
+
+## Робота з пакетами (Debian/Ubuntu)
+```
+sudo apt update                # Оновити список пакетів
+sudo apt upgrade               # Оновити всі пакети
+sudo apt install package       # Встановити пакет
+sudo apt remove package        # Видалити пакет
+```
+
+## systemctl – управління сервісами (Systemd)
+```
+systemctl status                        # Статус системи
+systemctl status nginx                  # Статус конкретного сервісу
+systemctl start nginx                   # Запустити сервіс
+systemctl stop nginx                    # Зупинити сервіс
+systemctl restart nginx                 # Перезапустити
+systemctl enable nginx                  # Ввімкнути автозапуск при старті
+systemctl disable nginx                 # Вимкнути автозапуск
+systemctl list-units --type=service     # Усі сервіси
+```
+
+## journalctl – перегляд логів
+```
+journalctl                    # Усі логи
+journalctl -u nginx           # Логи конкретного сервісу
+journalctl -b                 # Логи з поточного завантаження
+journalctl --since today      # Логи з сьогоднішнього дня
+journalctl -xe                # Помилки та повідомлення сервісів
+```
+
+## cron – планування завдань
+```
+crontab -e                    # Відкрити редагування задач поточного користувача
+crontab -l                    # Перегляд задач
+crontab -r                    # Видалити всі задачі
+```
+
+>[!]
+> Формат crontab
+>* * * * * /path/to/command
+>│ │ │ │ │
+>│ │ │ │ └─ день тижня (0–7, 0 або 7 = неділя)
+>│ │ │ └─── місяць (1–12)
+>│ │ └───── день місяця (1–31)
+>│ └─────── година (0–23)
+>└───────── хвилина (0–59)
+
+
+>Приклад: запуск скрипта кожного дня о 3:30
+>`30 3 * * * /home/user/backup.sh`
+
+
+## Корисні команди Bash / Shell
+```
+history                       # Історія команд
+!!                            # Повтор останньої команди
+!123                          # Повтор команди з історії під номером
+nano file.txt                 # Легкий текстовий редактор
+echo "text"                   # Вивід тексту
+cat file | grep "line"        # Пошук тексту в потоці
+alias ll='ls -la'             # Створити псевдонім
+source ~/.bashrc              # Застосувати зміни в конфігурації Bash для поточного юзера
+```
