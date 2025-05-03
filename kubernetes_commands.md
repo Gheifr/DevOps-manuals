@@ -29,6 +29,7 @@ kubectl scale deployment NAME --replicas=3  # Змінити кількість 
 ```
 kubectl config get-contexts       # Перегляд доступних контекстів
 kubectl config use-context NAME   # Перемикання контексту
+kubectl config set-context --current --namespace=NAMESPACE_NAME # змінити дефолтний неймспейс
 kubectl apply -k ./folder         # Kustomize: застосувати каталог
 kubectl port-forward POD 8080:80  # Проксі портів [LOCAL_PORT:]REMOTE_PORT
 ```
