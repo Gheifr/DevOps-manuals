@@ -1,6 +1,6 @@
 ## K8s Manifest Structure
 ### Зміст:  
-- [apiVersion & kind ](#apiVersion-and-kind-)  
+- [apiVersion & kind](#apiVersion-and-kind)  
 - [Маніфест: Deployment](#Маніфест-Deployment)  
 - [Маніфест: Service](#Маніфест-Service)  
 - [Маніфест: ConfigMap](#Маніфест-ConfigMap)  
