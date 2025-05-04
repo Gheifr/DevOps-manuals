@@ -46,6 +46,51 @@ PersistentVolumeClaim|v1|Запит на том|
 StorageClass|storage.k8s.io/v1|Налаштування сховища (динамічне provisoning)|
 VolumeAttachment|storage.k8s.io/v1|Прив'язка тому до вузла (зазвичай CSI)|  
 
+#### Мережеві ресурси
+kind|apiVersion|Опис
+:--- |:--- |:---|
+Service|v1|Визначення доступу до подів
+Ingress|networking.k8s.io/v1|Вхідний HTTP/HTTPS маршрут
+NetworkPolicy|networking.k8s.io/v1|Політика мережевого доступу між подами
+
+
+#### Конфігурація та секрети
+kind|apiVersion|Опис
+:--- |:--- |:---|
+ConfigMap|v1|Неконфіденційні конфігураційні дані
+Secret|v1|Конфіденційні дані (паролі, ключі)
+ServiceAccount|v1|Обліковий запис пода для доступу до API
+
+#### Системні об'єкти та управління
+kind|apiVersion|Опис
+:--- |:--- |:---|
+Namespace|v1|Простір імен у кластері
+Node|v1|Вузол (фізичний або віртуальний хост)
+Pod|v1|Базовий об'єкт для контейнерів
+LimitRange|v1|Обмеження ресурсів в Namespace
+ResourceQuota|v1|Квоти ресурсів у Namespace
+HorizontalPodAutoscaler|autoscaling/v2|Автоматичне масштабування pod'ів
+
+#### Інші корисні ресурси
+kind|apiVersion|Опис
+:--- |:--- |:---|
+Role|rbac.authorization.k8s.io/v1|Права доступу в Namespace
+RoleBinding|rbac.authorization.k8s.io/v1|Прив’язка ролей до користувачів
+ClusterRole|rbac.authorization.k8s.io/v1|Права на кластерному рівні
+ClusterRoleBinding|rbac.authorization.k8s.io/v1|Прив’язка кластерної ролі
+
+<details>
+<summary>Примітки</summary>
+
+- Більшість об’єктів типу kind: X мають apiVersion: v1, якщо це базові ресурси (Pod, ConfigMap, Secret тощо).
+
+- Об’єкти, пов’язані з контролем, масштабуванням, зберіганням, мають окремі API групи (apps/, batch/, autoscaling/, networking/ тощо).
+
+- Щоб уникнути помилок, завжди перевіряй apiVersion для свого Kubernetes-кластера командою:  
+```bash
+kubectl api-resources
+```
+</details>  
 
 [До змісту](#Зміст)  
 
