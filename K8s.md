@@ -1,7 +1,7 @@
 ## K8s Manifest Structure
 ### Зміст:  
 - [apiVersion & kind ](#apiVersion-&-kind-)  
-- [Маніфест: Deployment](#Маніфест:-Deployment)  
+- [Маніфест: Deployment](#Маніфест-Deployment)  
 - [Маніфест: Service](#Маніфест:-Service)  
 - [Маніфест: ConfigMap](#Маніфест:-ConfigMap)  
 - [Маніфест: Secret](#Маніфест:-Secret) 
@@ -48,7 +48,7 @@ VolumeAttachment|storage.k8s.io/v1|Прив'язка тому до вузла (�
 ---
 
 
-### Маніфест: Deployment
+### Маніфест Deployment
 
 ```yaml
 apiVersion: apps/v1               # обов'язкове. Визначає версію API для об'єкта (у даному випадку для Deployment)
