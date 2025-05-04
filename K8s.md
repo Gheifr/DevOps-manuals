@@ -1,14 +1,14 @@
 ## K8s Manifest Structure
 ### Зміст:  
-- [apiVersion & kind ](#apiVersion-&-kind-)  
+- [apiVersion & kind ](#apiVersion-and-kind-)  
 - [Маніфест: Deployment](#Маніфест-Deployment)  
-- [Маніфест: Service](#Маніфест:-Service)  
-- [Маніфест: ConfigMap](#Маніфест:-ConfigMap)  
-- [Маніфест: Secret](#Маніфест:-Secret) 
-- [Маніфест: PersistentVolume (PV)](#Маніфест:-PersistentVolume-(PV))  
-- [Маніфест: PersistentVolumeClaim (PVC)](#Маніфест:-PersistentVolumeClaim-(PVC))  
-- [Маніфест: StatefulSet](#Маніфест:-StatefulSet)  
-- [Маніфест: DaemonSet](#Маніфест:-DaemonSet)    
+- [Маніфест: Service](#Маніфест-Service)  
+- [Маніфест: ConfigMap](#Маніфест-ConfigMap)  
+- [Маніфест: Secret](#Маніфест-Secret) 
+- [Маніфест: PersistentVolume (PV)](#Маніфест-PersistentVolume-(PV))  
+- [Маніфест: PersistentVolumeClaim (PVC)](#Маніфест-PersistentVolumeClaim-(PVC))  
+- [Маніфест: StatefulSet](#Маніфест-StatefulSet)  
+- [Маніфест: DaemonSet](#Маніфест-DaemonSet)    
 
 
 Кожен YAML-файл Kubernetes містить опис одного або кількох ресурсів. Мінімальна структура одного ресурсу має вигляд:
@@ -27,7 +27,7 @@ spec:                          # обов'язкове для більшості
 ```
 
 ---  
-### apiVersion & kind  
+### apiVersion and kind  
 #### Контроль об'єктів (контролери)  
 kind|apiVersion|Опис|
 :--- |:--- |:---|
@@ -91,7 +91,7 @@ spec:                             # обов'язкове. Специфікац�
 
 ---
 
-### Маніфест: Service
+### Маніфест Service
 
 ```yaml
 apiVersion: v1                # обов'язкове. Версія API для Service
@@ -127,7 +127,7 @@ spec:                         # обов'язкове. Специфікація 
     
 ---
 
-### Маніфест: ConfigMap
+### Маніфест ConfigMap
 
 ```yaml
 apiVersion: v1                # обов'язкове. Версія API для ConfigMap
@@ -151,7 +151,7 @@ data:                         # обов'язкове. Дані, які буду
 </details>  
 ---
 
-### Маніфест: Secret
+### Маніфест Secret
 
 ```yaml
 apiVersion: v1                # обов'язкове. Версія API для Secret
@@ -177,7 +177,7 @@ data:                         # обов'язкове. Дані, що містя
 </details>  
 ---
 
-### Маніфест: PersistentVolume (PV)
+### Маніфест PersistentVolume (PV)
 
 ```yaml
 apiVersion: v1                            # обов'язкове. Версія API для PersistentVolume
@@ -217,7 +217,7 @@ spec:                                     # обов'язкове. Специф�
 </details>  
 ---
 
-### Маніфест: PersistentVolumeClaim (PVC)
+### Маніфест PersistentVolumeClaim (PVC)
 
 ```yaml
 apiVersion: v1                # обов'язкове. Версія API для PersistentVolumeClaim
@@ -251,7 +251,7 @@ spec:                         # обов'язкове. Специфікація 
 </details>  
 ---
 
-### Маніфест: StatefulSet
+### Маніфест StatefulSet
 
 ```yaml
 apiVersion: apps/v1                 # обов'язкове. Версія API для StatefulSet
@@ -305,7 +305,7 @@ spec:                               # обов'язкове. Специфіка�
 </details>  
 ---
 
-### Маніфест: DaemonSet
+### Маніфест DaemonSet
 
 ```yaml
 apiVersion: apps/v1                 # обов'язкове. Версія API для DaemonSet
