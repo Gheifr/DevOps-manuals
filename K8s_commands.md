@@ -9,11 +9,14 @@
 це дасть змогу замість `kubectl` викликати цю команду коротшим записом - `kub`  
 а після цього:  
 `kub config set-context --current --namespace=NAMESPACE_NAME`  
-де `NAMESPACE_NAME` - це назва поточного робочого неймспейсу, це забере необхідність вказувати його в кожній команді.
+де `NAMESPACE_NAME` - це назва поточного робочого неймспейсу.  
+Ця команда змінить namespace, що буде застосовуватись при кожній команді, як апендекс.  
+Але продукти та рішення розгортаються майже завжди у кілька namespaces, тому вказувати його потрібно буде, щоб переглянути якісь конкретні ресурси.  
+Ця команда лише додає більше зручності, та завжди памʼятаємо, що стандартний namespace це default.
 
 
 ##  Інформація про ресурси  
-```
+```bash
 kubectl get pods                  # Список подів
 kubectl get services              # Список сервісів
 kubectl get deployments           # Список деплойментів
@@ -23,7 +26,7 @@ kubectl get nodes                 # Ноди в кластері
 ```
 
 ## Робота з ресурсами  
-```
+```bash
 kubectl apply -f file.yaml                  # Створити або оновити ресурс
 kubectl create -f file.yaml                 # Створити ресурс
 kubectl delete -f file.yaml                 # Видалити ресурс
@@ -33,7 +36,7 @@ kubectl scale deployment NAME --replicas=3  # Змінити кількість 
 ```
 
 ## Інше  
-```
+```bash
 kubectl config get-contexts       # Перегляд доступних контекстів
 kubectl config use-context NAME   # Перемикання контексту
 kubectl config set-context --current --namespace=NAMESPACE_NAME # змінити дефолтний неймспейс
